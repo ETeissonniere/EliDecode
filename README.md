@@ -1,5 +1,9 @@
 # Eli.Decode
-Just a tool to decode obfuscated shellcodes using the unicorn engine
+Just a tool to decode obfuscated shellcodes using the unicorn engine.
+
+# Please note
+- You may have problems or wrong decoded shellcodes...
+- You need the unicorn engine (http://www.unicorn-engine.org/) AND the capstone engine (http://www.capstone-engine.org/) (with the python bindings...).
 
 # Supported archs
 - x86_32
@@ -21,5 +25,9 @@ Finally, please note that new architectures might be added if they are supported
 ```
 python Eli.Decode/decoder.py --help
 ```
+
+# Credits
+This code is based on unicorn-decoder(https://github.com/mothran/unicorn-decoder).
+Finally, I want to thanks everybody which gave me time there(https://github.com/unicorn-engine/unicorn/issues/451).
 
 # Don't forget to contribute !!
