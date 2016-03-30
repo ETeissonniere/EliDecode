@@ -18,8 +18,8 @@ Please note this is as easy as added / patching values in the "decoders" diction
 Finally, please note that new architectures might be added if they are supported by the unicorn engine (http://www.unicorn-engine.org/) AND the capstone engine (http://www.capstone-engine.org/).
 
 # Try:
-'''shell
+```
 python Eli.Decode/decoder.py --help
-'''
+```
 
 # Don't forget to contribute !!
