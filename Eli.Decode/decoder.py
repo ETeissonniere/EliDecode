@@ -34,6 +34,7 @@ def print_banner():
 	banner = choice(banners)
 	with open(banner) as f:
 		ui.out(f.read())
+	ui.out("\nCoded by {{RED}}DeveloppSoft{{CLEAR}} - {{BLUE}}github.com/DeveloppSoft{{CLEAR}}")
 
 class SimpleEngine:
 	def __init__(self, arch, mode):
