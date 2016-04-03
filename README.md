@@ -7,10 +7,10 @@ Just a tool to decode obfuscated shellcodes using the unicorn engine.
 
 # Supported archs
 - x86_32
+- x86_64
 
 # Todo
 - x86_16
-- x86_64
 - arm
 - arm64
 - mips_3
