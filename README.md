@@ -1,5 +1,5 @@
 # Eli.Decode
-Just a tool to decode obfuscated shellcodes using the unicorn engine.
+Just a tool to decode obfuscated shellcodes using the unicorn engine by DeveloppSoft(https://github.com/DeveloppSoft), original repo here(https://github.com/DeveloppSoft/Eli.Decode).
 
 # Please note
 - You may have problems or wrong decoded shellcodes...
