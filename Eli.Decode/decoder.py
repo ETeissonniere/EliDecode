@@ -11,7 +11,10 @@ from unicorn.x86_const import *
 from capstone import *
 import argparse
 
-instr_ptr = 0
+CODENAME = "Baby Tux"
+VERSION = "0.21 (beta)"
+
+instr_ptr = None
 
 decoders = {
 	# Disabled, I need the equivalent of EIP
@@ -35,6 +38,9 @@ def print_banner():
 	with open(banner) as f:
 		ui.out(f.read())
 	ui.out("\nCoded by {{RED}}DeveloppSoft{{CLEAR}} - {{BLUE}}github.com/DeveloppSoft{{CLEAR}}")
+
+def print_version():
+	ui.out("\n{{RED}}%s{{CLEAR}} - {{BLUE}}%s{{CLEAR}}" % (VERSION, CODENAME))
 
 class SimpleEngine:
 	def __init__(self, arch, mode):
@@ -116,12 +122,17 @@ def main():
 	parser.add_argument('-d', '--debug', dest='debug', help='Enable extra hooks for debugging of shellcode', required=False, default=False, action='store_true')
 	parser.add_argument('-o', '--output', dest='output', help='Where to write the decoded shellcode', required=False)
 	parser.add_argument('-s', '--show-modes', dest='show', action='store_true', help='show available modes and exit', required=False)
+	parser.add_argument('-v', '--version', dest='version', action='store_true', help='show version and exit', required=False)
 
 	args = parser.parse_args()
 
+	if args.version:
+		print_version()
+		sys.exit(0)
+	
 	if args.show:
 		for decoder in decoders:
-			print(decoder)
+			ui.out("{{BLUE}}" + decoder + "{{CLEAR}}")
 		sys.exit(0)
 
 	if not args.file or not args.mode or args.mode not in decoders:
