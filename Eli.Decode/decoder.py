@@ -8,24 +8,25 @@ import ui
 import sys
 from unicorn import *
 from unicorn.x86_const import *
+from unicorn.arm_const import *
 from capstone import *
 import argparse
 
-CODENAME = "Baby Tux"
-VERSION = "0.21 (beta)"
+CODENAME = "Super Tux"
+VERSION = "1.0 (release)"
 
 instr_ptr = None
 
 decoders = {
-	# Disabled, I need the equivalent of EIP
-	#"arm": (UC_ARCH_ARM, UC_MODE_ARM, CS_ARCH_ARM, CS_MODE_ARM),
-	#"arm64": (UC_ARCH_ARM64, UC_MODE_ARM, CS_ARCH_ARM64, CS_MODE_ARM),
+	"arm32": (UC_ARCH_ARM, UC_MODE_ARM, UC_ARM_REG_SP, 0x2000, UC_ARM_REG_PC, CS_ARCH_ARM, CS_MODE_ARM),
+	"arm_thumb": (UC_ARCH_ARM, UC_MODE_THUMB, UC_ARM_REG_SP, 0x2000, UC_ARM_REG_PC, CS_ARCH_ARM, CS_MODE_THUMB),
+	"arm64": (UC_ARCH_ARM64, UC_MODE_ARM, UC_ARM64_REG_SP, 0x2000, UC_ARM64_REG_PC, CS_ARCH_ARM64, CS_MODE_ARM),
 	# Disabled, I need to check something about big / little endian	
 	#"mips_3": (UC_ARCH_MIPS, UC_MODE_MIPS3, CS_MODE_MIPS3),
 	#"mips_32": (UC_ARCH_MIPS, UC_MODE_MIPS32, CS_MODE_MIPS32),
 	#"mips_32r6": (UC_ARCH_MIPS, UC_MODE_MIPS32R6, CS_MODE_MIPS32R6),
 	#"mips_64": (UC_ARCH_MIPS, UC_MODE_MIPS64, CS_MODE_MIPS64),
-	#"x86_16": (UC_ARCH_X86, UC_MODE_16, UC_X86_REG_EIP, 0x2000, CS_ARCH_X86, CS_MODE_16),
+	"x86_16": (UC_ARCH_X86, UC_MODE_16, UC_X86_REG_ESP, 0x2000, UC_X86_REG_EIP, CS_ARCH_X86, CS_MODE_16),
 	"x86_32": (UC_ARCH_X86, UC_MODE_32, UC_X86_REG_ESP, 0x2000, UC_X86_REG_EIP, CS_ARCH_X86, CS_MODE_32),
 	"x86_64": (UC_ARCH_X86, UC_MODE_64, UC_X86_REG_RSP, 0x2000, UC_X86_REG_RIP, CS_ARCH_X86, CS_MODE_64),
 }
