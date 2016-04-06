@@ -6,13 +6,14 @@ Just a tool to decode obfuscated shellcodes using the unicorn engine by [Develop
 - You need the [unicorn engine](http://www.unicorn-engine.org/) AND the [capstone engine](http://www.capstone-engine.org/) (with the python bindings...).
 
 # Supported archs
+- x86_16
 - x86_32
 - x86_64
+- arm_thumb
+- arm32
+- arm64
 
 # Todo
-- x86_16
-- arm
-- arm64
 - mips_3
 - mips_32
 - mips_32r6
