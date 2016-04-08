@@ -1,6 +1,6 @@
 # Eli.Decode
 THE tool to decode obfuscated shellcodes using the unicorn engine by [DeveloppSoft](https://github.com/DeveloppSoft), original repo [here](https://github.com/DeveloppSoft/Eli.Decode).
-It currently support 6 architectures and more arecoming (see the TODO list) !!
+It currently support 6 architectures and more are coming (see the TODO list) !!
 Check the [website](https://developpsoft.github.io/EliDecode/).
 
 
