@@ -1,34 +1,76 @@
 # Eli.Decode
-Just a tool to decode obfuscated shellcodes using the unicorn engine by [DeveloppSoft](https://github.com/DeveloppSoft), original repo [here](https://github.com/DeveloppSoft/Eli.Decode).
+THE tool to decode obfuscated shellcodes using the unicorn engine by [DeveloppSoft](https://github.com/DeveloppSoft), original repo [here](https://github.com/DeveloppSoft/Eli.Decode).
+It currently support 6 architectures and more arecoming (see the TODO list) !!
 
-# Please note
-- You may have problems or wrong decoded shellcodes...
-- You need the [unicorn engine](http://www.unicorn-engine.org/) AND the [capstone engine](http://www.capstone-engine.org/) (with the python bindings...).
 
-# Supported archs
-- x86_16
-- x86_32
-- x86_64
-- arm_thumb
-- arm32
-- arm64
+# Install
+'''
+git clone https://github.com/unicorn-engine/unicorn
+cd unicorn
+sudo ./make.sh install
+cd bindings/python
+sudo make install
 
-# Todo
-- mips_3
-- mips_32
-- mips_32r6
-- mips_64
+cd ../..
 
-Please note this is as easy as added / patching values in the "decoders" dictionnary, so... I just need to google it (let me time...).
-Finally, please note that new architectures might be added if they are supported by the [unicorn engine](http://www.unicorn-engine.org/) AND the [capstone engine](http://www.capstone-engine.org/).
+git clone https://github.com/aquynh/capstone
+cd capstone
+sudo ./make.sh install
+cd bindings/python
+make install
 
-# Try:
-```
-python Eli.Decode/decoder.py --help
-```
+cd ../..
+
+git clone https://github.com/DeveloppSoft/EliDecode
+cd EliDecode
+python decoder.py --help
+'''
+
+
+# Usage
+Coming soon...
+
+
+# Contribting
+You can contribute to EliDecode by:
+
+## Donating
+If you like my work, please considermaking a donation (button coming soon).
+
+## Coding
+Please do pull requests to improve EliDecode by adding to features.
+
+## Reporting
+If you have problems with EliDecode please open an issue.
+
+## Ideas
+If you know how to improve EliDecode but don't know how to do it, don't hesistate to open an issue!
+
+## Sharing and promoting
+You can share EliDecode if you want (under the terms of the license), for example by speaking about it on your website or making videos.
+
+## Everything else...
+There is many unquoted ways to contribute...
+
+
+# TODO
+- [x] x86_16
+- [x] x86_32
+- [x] x86_64
+- [x] arm_thumb
+- [x] arm32
+- [x] arm64
+- [ ] mips_3
+- [ ] mips_32
+- [ ] mips_32r6
+- [ ] mips_64
+
 
 # Credits
-This code is based on [unicorn-decoder](https://github.com/mothran/unicorn-decoder).
-Finally, I want to thanks everybody which gave me time [there](https://github.com/unicorn-engine/unicorn/issues/451).
+This code is based on unicorn-decoder. Finally, I want to thanks everybody which gave me time there.
 
-# Don't forget to contribute !!
+
+# Contributors
+- DeveloppSoft: project's owner (https://github.com/DeveloppSoft)
+- Nguyen Anh Quynh: fixed markdown, madethe capstone and unicorn engines (https://github.com/aquynh)
+Thanks you!
