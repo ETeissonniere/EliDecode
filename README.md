@@ -33,22 +33,16 @@ python decoder.py --help
 
 # Contribting
 You can contribute to EliDecode by:
-
 ## Donating
 If you like my work, please considermaking a donation (button coming soon).
-
 ## Coding
 Please do pull requests to improve EliDecode by adding to features.
-
 ## Reporting
 If you have problems with EliDecode please open an issue.
-
 ## Ideas
 If you know how to improve EliDecode but don't know how to do it, don't hesistate to open an issue!
-
 ## Sharing and promoting
 You can share EliDecode if you want (under the terms of the license), for example by speaking about it on your website or making videos.
-
 ## Everything else...
 There is many unquoted ways to contribute...
 
