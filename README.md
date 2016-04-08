@@ -67,4 +67,4 @@ This code is based on unicorn-decoder. Finally, I want to thanks everybody which
 
 # Contributors
 - DeveloppSoft: project's owner (https://github.com/DeveloppSoft).
-- Nguyen Anh Quynh: fixed markdown, madethe capstone and unicorn engines (https://github.com/aquynh).
+- Nguyen Anh Quynh: fixed markdown, made the capstone and unicorn engines (https://github.com/aquynh).
