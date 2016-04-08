@@ -4,7 +4,7 @@ It currently support 6 architectures and more arecoming (see the TODO list) !!
 
 
 # Install
-'''
+```
 git clone https://github.com/unicorn-engine/unicorn
 cd unicorn
 sudo ./make.sh install
@@ -24,11 +24,11 @@ cd ../..
 git clone https://github.com/DeveloppSoft/EliDecode
 cd EliDecode
 python decoder.py --help
-'''
+```
 
 
 # Usage
-Coming soon...
+## Coming soon...
 
 
 # Contribting
@@ -71,6 +71,5 @@ This code is based on unicorn-decoder. Finally, I want to thanks everybody which
 
 
 # Contributors
-- DeveloppSoft: project's owner (https://github.com/DeveloppSoft)
-- Nguyen Anh Quynh: fixed markdown, madethe capstone and unicorn engines (https://github.com/aquynh)
-Thanks you!
+- DeveloppSoft: project's owner (https://github.com/DeveloppSoft).
+- Nguyen Anh Quynh: fixed markdown, madethe capstone and unicorn engines (https://github.com/aquynh).
