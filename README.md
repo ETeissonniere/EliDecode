@@ -23,7 +23,7 @@ make install
 cd ../..
 
 git clone https://github.com/DeveloppSoft/EliDecode
-cd EliDecode
+cd Eli.Decode
 python decoder.py --help
 ```
 
