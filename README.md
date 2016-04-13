@@ -1,7 +1,6 @@
-# Eli.Decode
-THE tool to decode obfuscated shellcodes using the unicorn engine by [DeveloppSoft](https://github.com/DeveloppSoft), original repo [here](https://github.com/DeveloppSoft/Eli.Decode).
+# EliDecode
+THE tool to decode obfuscated shellcodes using the unicorn engine by [DeveloppSoft](https://developpsoft.github.io), original repo [here](https://github.com/DeveloppSoft/EliDecode).
 It currently support 6 architectures and more are coming (see the TODO list) !!
-Check the [website](https://developpsoft.github.io/EliDecode/).
 
 
 # Install
@@ -23,7 +22,7 @@ make install
 cd ../..
 
 git clone https://github.com/DeveloppSoft/EliDecode
-cd Eli.Decode
+cd EliDecode/Eli.Decode
 python decoder.py --help
 ```
 
@@ -32,7 +31,7 @@ python decoder.py --help
 ## Coming soon...
 
 
-# Contribting
+# Contributing
 You can contribute to EliDecode by:
 ## Donating
 If you like my work, please considermaking a donation (button coming soon).
