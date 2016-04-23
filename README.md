@@ -2,6 +2,12 @@
 EliDecode is a tool to decode obfuscated shellcodes using the [unicorn-engine](https://unicorn-engine.org) for the emulation and the [capstone-engine](https://capstone-engine.org) to print the asm code.
 Please note I should post news on my [website](https://developpsoft.github.io).
 
+# Architectures
+EliDecode support 6 architectures, and I will add new ones as soon as possible :smile:.
+Here is the updated list:
+ - x86 (16, 32 and 64 bits)
+ - arm (thumb, 32 and 64 bits)
+
 # Installing
 Just install python 2 (I may upgrade it to python 3 later...) and use install.py :smile:.
 For example:
