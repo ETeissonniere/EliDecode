@@ -89,6 +89,7 @@ def main():
 	parser.add_argument('-i', '--instructions', dest='max_instruction', help='max instructions to emulate', required=False)
 	parser.add_argument('-d', '--debug', dest='debug', help='enable extra hooks for debugging of shellcode', required=False, default=False, action='store_true')
 	parser.add_argument('-s', '--show-modes', dest='show_modes', help='list the modes', required=False, action="store_true")
+	parser.add_argument('-o', '--output', dest='output', help='write the binary dump of the decoded shellcode', required=False)
 
 	args = parser.parse_args()
 	
@@ -151,7 +152,10 @@ def main():
 		print("Decoded shellcode:")
 		mem = emu.mem_read(write_bounds[0], (write_bounds[1] - write_bounds[0]))
 		emu.disasm.disas_all(str(mem), write_bounds[0])
-
+		if args.output:
+			with open(args.output, "wb") as f:
+				f.write(mem)
+			print("Wrote %s bytes in %s" % (str(len(mem)), args.output))
 	else:
 		print("No SMC hits, no encoder detected")
 
