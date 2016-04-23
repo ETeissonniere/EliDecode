@@ -23,3 +23,6 @@ sudo ./install.py --unicorn --capstone
 
 # Contributing
 You can contribute in many ways like reporting bugs, adding new features, donating...
+
+# Credits
+EliDecode is a fork of [unicorn-decoder](https://github.com/mothran/unicorn-decoder).
