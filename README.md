@@ -1,5 +1,4 @@
 # EliDecode
-<<<<<<< HEAD
 EliDecode is a tool to decode obfuscated shellcodes using the [unicorn-engine](https://unicorn-engine.org) for the emulation and the [capstone-engine](https://capstone-engine.org) to print the asm code.
 Please note I should post news on my [website](https://developpsoft.github.io).
 
