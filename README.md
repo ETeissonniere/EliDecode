@@ -88,10 +88,10 @@ There is many unquoted ways to contribute...
 - [x] arm_thumb
 - [x] arm32
 - [x] arm64
-- [ ] mips_3
-- [ ] mips_32
-- [ ] mips_32r6
-- [ ] mips_64
+- [x] mips_3
+- [x] mips_32
+- [x] mips_32r6
+- [x] mips_64
 
 
 # Credits
@@ -101,4 +101,3 @@ This code is based on unicorn-decoder. Finally, I want to thanks everybody which
 # Contributors
 - DeveloppSoft: project's owner (https://github.com/DeveloppSoft).
 - Nguyen Anh Quynh: fixed markdown, made the capstone and unicorn engines (https://github.com/aquynh).
->>>>>>> 3c98b1bf833cb497f01a3dafe7fe5b748fa5f7cf

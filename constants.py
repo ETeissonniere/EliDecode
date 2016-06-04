@@ -25,6 +25,7 @@ from unicorn import *
 from unicorn.x86_const import *
 from unicorn.arm_const import *
 from unicorn.arm64_const import *
+from unicorn.mips_const import *
 
 from capstone import *
 
@@ -84,5 +85,77 @@ const = {
 		"instr": UC_ARM_REG_PC,
 		"cs_arch": CS_ARCH_ARM,
 		"cs_mode": CS_MODE_ARM
-	}
+	},
+	"mips3_big": {
+		"uc_arch": UC_ARCH_MIPS,
+		"uc_mode": UC_MODE_MIPS3 + UC_MODE_BIG_ENDIAN,
+		"stack": UC_MIPS_REG_SP,
+		"stack_val": 0x2000,
+		"instr": UC_MIPS_REG_PC,
+		"cs_arch": CS_ARCH_MIPS,
+		"cs_mode": CS_MODE_MIPS3 + CS_MODE_BIG_ENDIAN
+	},
+	"mips32_big": {
+		"uc_arch": UC_ARCH_MIPS,
+		"uc_mode": UC_MODE_MIPS32 + UC_MODE_BIG_ENDIAN,
+		"stack": UC_MIPS_REG_SP,
+		"stack_val": 0x2000,
+		"instr": UC_MIPS_REG_PC,
+		"cs_arch": CS_ARCH_MIPS,
+		"cs_mode": CS_MODE_MIPS32 + CS_MODE_BIG_ENDIAN
+	},
+	"mips32r6_big": {
+		"uc_arch": UC_ARCH_MIPS,
+		"uc_mode": UC_MODE_MIPS32r6 + UC_MODE_BIG_ENDIAN,
+		"stack": UC_MIPS_REG_SP,
+		"stack_val": 0x2000,
+		"instr": UC_MIPS_REG_PC,
+		"cs_arch": CS_ARCH_MIPS,
+		"cs_mode": CS_MODE_MIPS32r6 + CS_MODE_BIG_ENDIAN
+	},
+	"mips64_big": {
+		"uc_arch": UC_ARCH_MIPS,
+		"uc_mode": UC_MODE_MIPS64 + UC_MODE_BIG_ENDIAN,
+		"stack": UC_MIPS_REG_SP,
+		"stack_val": 0x2000,
+		"instr": UC_MIPS_REG_PC,
+		"cs_arch": CS_ARCH_MIPS,
+		"cs_mode": CS_MODE_MIPS64 + CS_MODE_BIG_ENDIAN
+	},
+	"mips3_little": {
+		"uc_arch": UC_ARCH_MIPS,
+		"uc_mode": UC_MODE_MIPS3 + UC_MODE_LITTLE_ENDIAN,
+		"stack": UC_MIPS_REG_SP,
+		"stack_val": 0x2000,
+		"instr": UC_MIPS_REG_PC,
+		"cs_arch": CS_ARCH_MIPS,
+		"cs_mode": CS_MODE_MIPS3 + CS_MODE_LITTLE_ENDIAN
+	},
+	"mips32_little": {
+		"uc_arch": UC_ARCH_MIPS,
+		"uc_mode": UC_MODE_MIPS32 + UC_MODE_LITTLE_ENDIAN,
+		"stack": UC_MIPS_REG_SP,
+		"stack_val": 0x2000,
+		"instr": UC_MIPS_REG_PC,
+		"cs_arch": CS_ARCH_MIPS,
+		"cs_mode": CS_MODE_MIPS32 + CS_MODE_LITTLE_ENDIAN
+	},
+	"mips32r6_little": {
+		"uc_arch": UC_ARCH_MIPS,
+		"uc_mode": UC_MODE_MIPS32r6 + UC_MODE_LITTLE_ENDIAN,
+		"stack": UC_MIPS_REG_SP,
+		"stack_val": 0x2000,
+		"instr": UC_MIPS_REG_PC,
+		"cs_arch": CS_ARCH_MIPS,
+		"cs_mode": CS_MODE_MIPS32r6 + CS_MODE_LITTLE_ENDIAN
+	},
+	"mips64_little": {
+		"uc_arch": UC_ARCH_MIPS,
+		"uc_mode": UC_MODE_MIPS64 + UC_MODE_LITTLE_ENDIAN,
+		"stack": UC_MIPS_REG_SP,
+		"stack_val": 0x2000,
+		"instr": UC_MIPS_REG_PC,
+		"cs_arch": CS_ARCH_MIPS,
+		"cs_mode": CS_MODE_MIPS64 + CS_MODE_LITTLE_ENDIAN
+	},
 }
