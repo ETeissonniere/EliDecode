@@ -1,5 +1,8 @@
 #!/usr/bin/python
 
+VERSION = "1.1r"
+CODENAME = "Phoenix"
+
 import sys
 
 from unicorn import *
@@ -83,6 +86,14 @@ def hook_code(uc, addr, size, user_data):
 # maybe even disasm them and poke around.
 
 def main():
+	# Print version banner
+	print "EliDecode started!"
+	print "Version: " + VERSION
+	print "Codename: " + CODENAME
+	print "Author: DeveloppSoft"
+	print "License: GNU GPL"
+	print ""
+
 	parser = argparse.ArgumentParser(description='Decode supplied x86 / x64 shellcode automatically with the unicorn engine')
 	parser.add_argument('-f', '--file', dest='file', help='file to shellcode binary file', required=False, type=file)
 	parser.add_argument('-m', '--mode', dest='mode', help='mode of the emulator (use --show-modes to have a list)', required=False, default="x86_32")

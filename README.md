@@ -7,6 +7,7 @@ EliDecode support 6 architectures, and I will add new ones as soon as possible :
 Here is the updated list:
  - x86 (16, 32 and 64 bits)
  - arm (thumb, 32 and 64 bits)
+ - mips (3, 32, 32r6 and 64 __little and big endian__)
 
 # Installing
 Just install python 2 (I may upgrade it to python 3 later...) and use install.py :smile:.
