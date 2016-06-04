@@ -9,3 +9,9 @@ before_script:
  - sudo ./install.py --unicorn --capstone
 
 script: ./.travis.sh
+
+compiler:
+ - gcc
+
+os:
+ - linux
