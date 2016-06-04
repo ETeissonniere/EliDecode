@@ -19,14 +19,6 @@ sudo ./install.py --unicorn --capstone
 ./decoder.py --help
 ```
 
-# Todo
- - Change the algorithm we use to decoded (why not?)
- - Add nice colors :smile:
- - Add the ability to uninstall tools for install.py
- - Add mips and other architectures
- - Make EliDecode usable as a python module
- - Add more tests
-
 # Contributing
 You can contribute in many ways like reporting bugs, adding new features, donating...
 
@@ -92,6 +84,9 @@ There is many unquoted ways to contribute...
 - [x] mips_32
 - [x] mips_32r6
 - [x] mips_64
+- [ ] build as a python module
+- [ ] add nice colors
+- [ ] add more testcases
 
 
 # Credits
