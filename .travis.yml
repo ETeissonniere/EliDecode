@@ -1,0 +1,9 @@
+language: python
+
+before_script:
+ - chmod +x decoder.py
+ - chmod +x install.py
+ - chmod +x .travis.sh
+ - sudo ./install.py --unicorn --capstone
+
+script: ./.travis.sh
