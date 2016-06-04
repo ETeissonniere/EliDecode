@@ -3,6 +3,8 @@ python:
  - "2.7"
 
 before_script:
+ - export LD_LIBRARY_PATH=`pwd`/samples/:$LD_LIBRARY_PATH
+ - export cc=gcc
  - sudo chmod +x decoder.py
  - sudo chmod +x install.py
  - sudo chmod +x .travis.sh
