@@ -140,7 +140,7 @@ def main():
 	emu.mem_write(START_RIP, bin_code)
 
 	# write a INT 0x3 near the end of the code blob to make sure emulation ends
-	emu.mem_write(len(bin_code) + 0xff, "\xcc\xcc\xcc\xcc")
+	#emu.mem_write(len(bin_code) + 0xff, "\xcc\xcc\xcc\xcc")
 
 	emu.hook_add(UC_HOOK_MEM_INVALID, hook_mem_invalid)
 	emu.hook_add(UC_HOOK_MEM_WRITE, hook_smc_check)
