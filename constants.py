@@ -104,14 +104,14 @@ const = {
 		"cs_arch": CS_ARCH_MIPS,
 		"cs_mode": CS_MODE_MIPS32 + CS_MODE_BIG_ENDIAN
 	},
-	"mips32r6_big": {
+	"mips32R6_big": {
 		"uc_arch": UC_ARCH_MIPS,
-		"uc_mode": UC_MODE_MIPS32r6 + UC_MODE_BIG_ENDIAN,
+		"uc_mode": UC_MODE_MIPS32R6 + UC_MODE_BIG_ENDIAN,
 		"stack": UC_MIPS_REG_SP,
 		"stack_val": 0x2000,
 		"instr": UC_MIPS_REG_PC,
 		"cs_arch": CS_ARCH_MIPS,
-		"cs_mode": CS_MODE_MIPS32r6 + CS_MODE_BIG_ENDIAN
+		"cs_mode": CS_MODE_MIPS32R6 + CS_MODE_BIG_ENDIAN
 	},
 	"mips64_big": {
 		"uc_arch": UC_ARCH_MIPS,
@@ -140,14 +140,14 @@ const = {
 		"cs_arch": CS_ARCH_MIPS,
 		"cs_mode": CS_MODE_MIPS32 + CS_MODE_LITTLE_ENDIAN
 	},
-	"mips32r6_little": {
+	"mips32R6_little": {
 		"uc_arch": UC_ARCH_MIPS,
-		"uc_mode": UC_MODE_MIPS32r6 + UC_MODE_LITTLE_ENDIAN,
+		"uc_mode": UC_MODE_MIPS32R6 + UC_MODE_LITTLE_ENDIAN,
 		"stack": UC_MIPS_REG_SP,
 		"stack_val": 0x2000,
 		"instr": UC_MIPS_REG_PC,
 		"cs_arch": CS_ARCH_MIPS,
-		"cs_mode": CS_MODE_MIPS32r6 + CS_MODE_LITTLE_ENDIAN
+		"cs_mode": CS_MODE_MIPS32R6 + CS_MODE_LITTLE_ENDIAN
 	},
 	"mips64_little": {
 		"uc_arch": UC_ARCH_MIPS,
