@@ -3,7 +3,7 @@
 # Ignored if python 3
 from __future__ import print_function
 
-VERSION = "1.1r"
+VERSION = "1.2r"
 CODENAME = "Phoenix"
 
 import sys
@@ -23,13 +23,18 @@ class SimpleEngine:
 		self.capmd = Cs(cs_arch, cs_mode)
 
 	def disas_single(self, data, addr):
-		for i in self.capmd.disasm(data, addr):
-			print("  0x%x:\t%s\t%s" % (i.address, i.mnemonic, i.op_str))
-			break
+		self.disas_all(data, addr, 1)
 
-	def disas_all(self, data, addr):
+	# We use -1 since bool(-1) is False because python2's false is different from python2's False
+	def disas_all(self, data, addr, single=0):
+		if sys.version[0] != "2":
+			# We need to encode the data or we will have a TypeError
+			# UTF-8 should be the best one
+			data = data.encode("utf-8")
 		for i in self.capmd.disasm(data, addr):
 			print("  0x%x:\t%s\t%s" % (i.address, i.mnemonic, i.op_str))
+			if single:
+				break
 
 # globals for the hooks
 write_bounds = [None, None]
@@ -140,7 +145,7 @@ def main():
 	emu.mem_write(START_RIP, bin_code)
 
 	# write a INT 0x3 near the end of the code blob to make sure emulation ends
-	#emu.mem_write(len(bin_code) + 0xff, "\xcc\xcc\xcc\xcc")
+	emu.mem_write(len(bin_code) + 0xff, b"\xcc\xcc\xcc\xcc")
 
 	emu.hook_add(UC_HOOK_MEM_INVALID, hook_mem_invalid)
 	emu.hook_add(UC_HOOK_MEM_WRITE, hook_smc_check)
